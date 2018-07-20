@@ -1,0 +1,24 @@
+articles:
+
+- title: ...
+  thumbnail: ...
+  img: ...
+  content: ...
+  date: ...
+  author: ...
+
+
+
+
+- title:
+  thumbnail:
+  paragraphs:
+    - type: text
+      content: 'some text'
+    - type: image
+      content: some.url
+    - type: ul
+      content: item1, item2, item3
+    - type: code
+      lang: javascript
+      content: console.log('hello world');

@@ -1,0 +1,10 @@
+@import "normalize";
+// General.
+@import "mgapcdev/variables";
+@import "mgapcdev/mixins";
+@import "mgapcdev/_syntax-highlighting";
+// Site.
+@import "mgapcdev/text";
+@import "mgapcdev/navbar";
+@import "mgapcdev/footer";
+@import "mgapcdev/article-list";
