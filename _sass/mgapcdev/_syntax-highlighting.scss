@@ -5,6 +5,13 @@ pre {
         color: #fff;
     }
 }
+code {
+    white-space: pre-wrap;
+    span {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}
 $grey: rgb(102, 102, 102);
 $orange: rgb(208, 120, 42);
 $brown: rgb(167, 146, 90);

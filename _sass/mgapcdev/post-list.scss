@@ -42,15 +42,16 @@
             display: none;
         }
     }
-
 }
 .post--date {
+    margin-bottom: 15px;
     grid-column: 1;
     @include mq($medium) {
         grid-column: 2;
     };
 }
 .post--title {
+    margin-bottom: 5px;
     grid-column: 1;
     @include mq($medium) {
         grid-column: 2;

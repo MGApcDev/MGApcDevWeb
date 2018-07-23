@@ -12,6 +12,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <ul class="post--list">
       {%- for post in site.posts -%}
+      <a href="{{ post.url | relative_url }}">
       <li>
         {%- if post.thumbnail -%}
             <div class="post--thumbnail">
@@ -20,13 +21,12 @@ layout: default
         {%- endif -%}
         {%- assign date_format = "%-d %b, %Y" -%}
         <h3 class="post--title">
-          <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
-          </a>
         </h3>
-        <span class="post--date">{{ post.date | date: date_format }}</span>
+        <span class="post--date"><i>{{ post.date | date: date_format }}</i></span>
         <p class="post--desc">{{ post.desc }}</p>
       </li>
+      </a>
       <hr>
       {%- endfor -%}
     </ul>

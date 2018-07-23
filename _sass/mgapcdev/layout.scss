@@ -7,11 +7,12 @@ main {
     max-width: $ultrawide;
     @include flex(1);
     margin-top: 51px;
-    padding-top: 30px;
+    padding-top: 15px;
     @include mq($small) {
         margin-top: 44px;
     };
     @include mq($medium) {
+        padding-top: 30px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
