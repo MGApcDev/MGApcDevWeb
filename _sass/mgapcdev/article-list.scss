@@ -1,0 +1,77 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include mq($medium) {
+        grid-column-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+.site--twitter {
+    max-height: 800px;
+    overflow-y: scroll;
+    display: none;
+    margin-bottom: 50px;
+    @include mq($medium) {
+        display: block;
+        grid-column: 2;
+    };
+}
+.post--list {
+    width: 100%;
+    margin-bottom: 50px;
+    @include mq($medium) {
+        grid-column: 1;
+    };
+    li {
+        display: grid;
+        list-style: none;
+        grid-template-columns: 1fr;
+        @include mq($medium) {
+            grid-template-columns: 1fr 2fr;
+        };
+    }
+    hr {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        @include mq($medium) {
+            width: 66%;
+        };
+        &:last-child {
+            display: none;
+        }
+    }
+
+}
+.post--date {
+    grid-column: 1;
+    @include mq($medium) {
+        grid-column: 2;
+    };
+}
+.post--title {
+    grid-column: 1;
+    @include mq($medium) {
+        grid-column: 2;
+    };
+}
+.post--desc {
+    grid-column: 1;
+    @include mq($medium) {
+        grid-column: 2;
+    };
+}
+.post--thumbnail {
+    max-height: 250px;
+    grid-column: 1;
+    @include aspect-ratio(16, 10);
+    @include mq($medium) {
+        grid-row: 1 / span 4;
+        max-height: none;
+    };
+    img {
+        max-height: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,26 @@
+body {
+    @include flexbox;
+    @include flex-direction('column');
+    margin: 0 auto;
+}
+main {
+    max-width: $ultrawide;
+    @include flex(1);
+    margin-top: 51px;
+    padding-top: 30px;
+    @include mq($small) {
+        margin-top: 44px;
+    };
+    @include mq($medium) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    };
+    .wrapper {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
+footer {
+    width: 100%;
+}

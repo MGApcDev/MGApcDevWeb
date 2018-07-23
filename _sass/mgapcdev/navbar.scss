@@ -1,0 +1,225 @@
+.navbar {
+    @include clearfix;
+    li {
+        display: block;
+    }
+}
+.navbar--wrapper {
+    max-width: $ultrawide;
+    margin: 0 auto;
+    background: $highlight-color;
+}
+.navbar--left {
+    @include flexbox;
+    @include mq($small) {
+        float: left;
+    };
+    li {
+        display: inline-block;
+    }
+    .navbar--left--logo {
+        width: 100%;
+    }
+    .navbar--left--burger {
+        width: 75px;
+        text-align: center;
+        color: $white;
+        font-size: 24px;
+        i {
+            padding: 13px 25px;
+        }
+        @include mq($small) {
+            display: none;
+        };
+    }
+}
+.navbar--right {
+    display: none;
+    @include mq($small) {
+        float: right;
+        display: block !important;
+
+        li {
+            display: inline-block;
+        }
+    }
+    // max-height: 120px;
+    &.closed {
+        // max-height: 0;
+    }
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);#cssmenu {
+  background: $highlight-color;
+  width: auto;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  // display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+
+  // display: inline-block;
+  // padding: 0;
+  // margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  @include mq($tablet) {
+    font-size: 14px;
+  }
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+#cssmenu ul li a:hover, #cssmenu .is-active {
+  color: #333333;
+}
+#cssmenu ul li a:hover:before, #cssmenu .is-active:before{
+  width: 100%;
+}
+.navbar--right li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 21px;
+  height: 2px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.is-active a {
+  color: #333333;
+}
+#cssmenu ul li.is-active a:before {
+  width: 100%;
+}
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+    float: none;
+    // display: block;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid $highlight-color;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  #cssmenu ul li a:after {
+    display: none !important;
+  }
+  #cssmenu ul li a:before {
+    display: none !important;
+  }
+}
+
+#cssmenu {
+  z-index: 10;
+  margin-bottom: 15px;
+  margin-top: -3px;
+  position: fixed;
+  width: 100% !important;
+  transition: top 0.2s ease-in-out;
+  top: 0px;
+  height: 44px;
+}
+.navbar-brand {
+  background: $highlight-color;
+  @include mq($tablet) {
+    float: left;
+  }
+  li:nth-child(1) {
+    float: left !important;
+  }
+  li:nth-child(2) {
+    float: right !important;
+  }
+}
+.navbar-nav {
+  background: $highlight-color;
+  @include mq($tablet) {
+    float: right;
+  }
+  overflow-y: hidden;
+  max-height: 300px; /* approximate max height */
+
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  &.closed {
+	max-height: 0;
+    @include mq($tablet) {
+      max-height: 300px;
+    }
+  }
+}
+.nav-up {
+  top: -254px !important;
+
+  @include mq($tablet) {
+    top: -51px !important;
+  }
+}
+.nav-burger {
+  @include mq($tablet) {
+    display: none !important;
+  }
+}

@@ -10,25 +10,30 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
+    <ul class="post--list">
       {%- for post in site.posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
+        {%- if post.thumbnail -%}
+            <div class="post--thumbnail">
+                <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
+            </div>
+        {%- endif -%}
+        {%- assign date_format = "%-d %b, %Y" -%}
+        <h3 class="post--title">
+          <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        <span class="post--date">{{ post.date | date: date_format }}</span>
+        <p class="post--desc">{{ post.desc }}</p>
       </li>
+      <hr>
       {%- endfor -%}
     </ul>
+    <div class="site--twitter">
+        <a class="twitter-timeline" href="https://twitter.com/MGApcPro?ref_src=twsrc%5Etfw">Tweets by MGApcPro</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
 </div>
