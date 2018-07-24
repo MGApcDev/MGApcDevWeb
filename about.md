@@ -6,15 +6,16 @@ permalink: /about/
 weight: 10
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<img class="about--profile" src="/assets/posts/187ef4436122d1cc2f40dc2b92f0eba0.png">
+<div class="post about">
+    Hi my name is Mathias Grundtvig Andreasen and I'm a fullstack software developer, living in Denmark. I'm currently studing my masters degree in software development. I'm quite versatile in software, being very flexible with frontend and backend work. I'm love to try new things and strive to get better.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+</div>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Contact me
 
+Find me on <a href="https://www.linkedin.com/in/mathias-grundtvig-andreasen-2682b8a2/" target="_blank">LinkedIn</a>
 
-[jekyll-organization]: https://github.com/jekyll
+<i>or</i>
+
+Send me an email: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
