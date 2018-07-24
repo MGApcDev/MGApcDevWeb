@@ -6,4 +6,4 @@ permalink: /projects/
 weight: 1
 ---
 
-## Projects
+{%- include post-list.html filter="projects" -%}

@@ -1,0 +1,38 @@
+.android-emote {
+  // height: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+  @include mq($medium) {
+      grid-column: 1 / span 2;
+  };
+  .spinner {
+    opacity: 1;
+    z-index: -10;
+    background-image: url("/assets/icon/loading.svg");
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 150px;
+    width: calc(100% - 20px);
+    max-width: 400px;
+    @include mq($min, $tablet) {
+      height: 100%;
+    }
+    @include transition(opacity 1s);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    @include transition(opacity 1s);
+    @include mq($min, $tablet) {
+      position: absolute;
+      width: auto;
+    }
+  }
+}
+.fade-background-svg {
+  opacity: 0 !important;
+  position: absolute;
+}

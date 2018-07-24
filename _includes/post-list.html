@@ -1,0 +1,22 @@
+{%- if site.posts.size > 0 -%}
+  <ul class="post--list">
+    {%- for post in site.posts -%}
+    <a href="{{ post.url | relative_url }}">
+    <li>
+      {%- if post.thumbnail -%}
+          <div class="post--thumbnail">
+              <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
+          </div>
+      {%- endif -%}
+      {%- assign date_format = "%-d %b, %Y" -%}
+      <h3 class="post--title">
+          {{ post.title | escape }}
+      </h3>
+      <span class="post--date"><i>{{ post.date | date: date_format }}</i></span>
+      <p class="post--desc">{{ post.desc }}</p>
+    </li>
+    </a>
+    <hr>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
