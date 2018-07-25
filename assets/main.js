@@ -8,7 +8,8 @@ const MGApcDev = {
         $(function() {
             console.log( "ready!" );
             $('.navbar--left--burger').on('click', function() {
-                $('.navbar--right').toggleClass('closed');
+                $(this).find('.hamburger').toggleClass('is-active');
+                // $('.navbar--right').toggleClass('closed');
                 $('.navbar--right').slideToggle(100);
             });
 

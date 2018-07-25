@@ -5,7 +5,13 @@
             <div class="navbar--wrapper">
                 <ul class="navbar--left">
                     <li class="navbar--left--logo"><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></li>
-                    <li class="navbar--left--burger"><i class="fa fa-bars"></i></li>
+                    <li class="navbar--left--burger">
+                        <button class="hamburger hamburger--squeeze" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </li>
                 </ul>
                 {% assign sorted_pages = site.pages | sort:"weight" %}
                 <ul class="navbar--right">
