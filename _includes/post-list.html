@@ -3,7 +3,7 @@
     {%- for post in site.posts -%}
     <a href="{{ post.url | relative_url }}">
     <li>
-      {%- if post.thumbnail -%}
+      {%- if post.thumbnail != "" -%}
           <div class="post--thumbnail">
               <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
           </div>
