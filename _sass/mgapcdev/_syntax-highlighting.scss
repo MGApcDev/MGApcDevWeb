@@ -24,8 +24,6 @@ $purple: rgb(154, 130, 151);
  */
 .highlight {
   background: #fff;
-  @extend %vertical-rhythm;
-
   .highlighter-rouge & {
     background: #eef;
   }

@@ -1,0 +1,9 @@
+@mixin margin-wrapper($attr) {
+    #{$attr}: 15px;
+    @include mq($small) {
+        #{$attr}: 40px;
+    };
+    @include mq($large) {
+        #{$attr}: 60px;
+    };
+}

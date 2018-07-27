@@ -2,6 +2,8 @@
 // ==================================================
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
+  @include margin-wrapper('padding-right');
+  @include margin-wrapper('padding-left');
   display: inline-block;
   cursor: pointer;
 

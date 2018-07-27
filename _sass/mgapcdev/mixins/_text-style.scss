@@ -1,0 +1,59 @@
+@mixin base-font {
+    font-style: normal;
+    font-stretch: normal;
+    text-align: left;
+}
+@mixin P {
+    @include base-font;
+    font-family: $font-family--SourceSansPro;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+    @include mq($small) {
+        font-size: 18px;
+    }
+    @include mq($large) {
+        font-size: 20px;
+    };
+}
+@mixin H1 {
+    @include base-font;
+
+}
+@mixin H2 {
+    @include base-font;
+
+}
+@mixin H3 {
+    @include base-font;
+
+}
+@mixin font--image-caption {
+
+}
+@mixin font--code {
+
+}
+@mixin font--post--title {
+    @include base-font;
+    font-family: $font-family--Cabin;
+    font-size: 40px;
+    @include mq($large) {
+        font-size: 60px;
+    };
+}
+@mixin font--post--date {
+    @include base-font;
+
+}
+@mixin font--post--desc {
+    @include base-font;
+
+}
+@mixin font--nav--text {
+
+}
+@mixin font--footer--text {
+
+}

@@ -17,6 +17,8 @@ footer {
     .wrapper {
         max-width: $ultrawide;
         margin: 15px 25px;
+        @include margin-wrapper('margin-right');
+        @include margin-wrapper('margin-left');
         @include clearfix;
         @include mq($small) {
             margin-top: 25px;
