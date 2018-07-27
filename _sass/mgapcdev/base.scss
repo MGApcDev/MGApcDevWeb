@@ -121,7 +121,6 @@ a {
   }
 }
 
-
 /**
  * Blockquotes
  */
@@ -200,4 +199,20 @@ body {
 
 p {
     @include P;
+}
+li {
+    @include P;
+}
+h1 {
+    @include H1;
+}
+h2 {
+    @include H2;
+}
+h3 {
+    @include H3;
+}
+
+p, h2, h3, ol, ul, table, blockquote, .highlight {
+    @include margin-element('margin-bottom');
 }

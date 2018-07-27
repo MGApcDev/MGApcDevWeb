@@ -3,17 +3,17 @@
 // Vendor, pre-setup.
 @import "mgapcdev/vendor/normalize";
 
-// Base of website.
+// CSS setup.
 @import "mgapcdev/colors";
 @import "mgapcdev/variables";
 @import "mgapcdev/mixins";
-@import "mgapcdev/base";
 @import "mgapcdev/layout";
 @import "mgapcdev/_syntax-highlighting";
 
 // Vendor, post-setup.
 @import "mgapcdev/vendor/hamburgers/hamburgers";
 
-// Specific elements.
+// CSS post-setup.
+@import "mgapcdev/base";
 @import "mgapcdev/components";
 @import "mgapcdev/pages";

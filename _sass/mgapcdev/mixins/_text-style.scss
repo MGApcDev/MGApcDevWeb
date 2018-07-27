@@ -19,15 +19,41 @@
 }
 @mixin H1 {
     @include base-font;
-
+    font-family: $font-family--Cabin;
+    font-size: 40px;
+    @include mq($medium) {
+        font-size: 60px;
+    };
+    @include mq($large) {
+        font-size: 70px;
+    };
 }
 @mixin H2 {
     @include base-font;
-
+    font-family: $font-family--SourceSansPro;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.75;
+    @include mq($small) {
+        font-size: 22px;
+    };
+    @include mq($large) {
+        font-family: $font-family--Cabin;
+        font-size: 24px;
+    };
 }
 @mixin H3 {
     @include base-font;
-
+    font-family: $font-family--SourceSansPro;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.75;
+    @include mq($small) {
+        font-size: 22px;
+    };
+    @include mq($large) {
+        font-size: 24px;
+    };
 }
 @mixin font--image-caption {
 
@@ -36,20 +62,23 @@
 
 }
 @mixin font--post--title {
-    @include base-font;
-    font-family: $font-family--Cabin;
-    font-size: 40px;
-    @include mq($large) {
-        font-size: 60px;
-    };
+    @include H1;
 }
 @mixin font--post--date {
     @include base-font;
-
+    font-family: $font-family--SourceSansPro;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    @include mq($small) {
+        font-size: 16px;
+    }
+    @include mq($large) {
+        font-size: 18px;
+    };
 }
 @mixin font--post--desc {
-    @include base-font;
-
+    @include H2;
 }
 @mixin font--nav--text {
 

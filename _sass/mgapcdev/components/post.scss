@@ -6,4 +6,75 @@
     @include mq($large) {
         margin-bottom: 60px;
     };
+    img {
+        margin-left: -15px;
+        width: calc(100% + (2 * 15px));
+        max-width: none;
+        @include mq($small) {
+            max-width: 100%;
+            display: block;
+            @include center;
+            width: auto;
+            max-height: 500px;
+        };
+    }
+    .post--image {
+        @include margin('margin-bottom', 5px, 10px, '', 20px);
+    }
+    .post--image-desc {
+        text-align: left;
+        @include mq($small) {
+            text-align: center;
+        };
+    }
+    h2, h3 {
+        @include margin('margin-bottom', 15px);
+    }
+    /**
+     * To improve browser support and give custom ul bullet.
+     * @see https://j.eremy.net/align-lists-flush-left/
+     */
+    ul {
+        display: table;
+        padding-left: 0;
+        list-style: none;
+        li {
+            display: table-row;
+            &:before {
+                content: "–";
+                display: table-cell;
+                padding-right: 0.4em;
+            }
+        }
+    }
+    ol {
+        display: table;
+        padding-left: 0;
+        list-style: none;
+        li {
+            display: table-row;
+            counter-increment: table-ol;
+            &:before {
+                content: counter(table-ol) ".";
+                display: table-cell;
+                padding-right: 0.4em;
+                text-align: right;
+            }
+        }
+    }
+}
+.post--header--title {
+    margin-bottom: 0;
+    @include mq($large) {
+        margin-bottom: 15px;
+    };
+}
+.post--meta {
+    time {
+        @include font--post--date;
+    }
+    @include margin('margin-bottom', 0, 0, 0, 5px);
+}
+.post--content--desc {
+    @include margin-element('margin-bottom');
 }

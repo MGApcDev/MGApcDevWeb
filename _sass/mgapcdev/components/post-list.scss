@@ -65,15 +65,20 @@
     };
 }
 .post--thumbnail {
+    @include center;
     max-height: 250px;
     grid-column: 1;
-    @include aspect-ratio(16, 10);
     @include mq($medium) {
+        @include aspect-ratio(16, 10);
         grid-row: 1 / span 4;
         max-height: none;
+        margin: 0;
     };
     img {
-        max-height: 100%;
+        max-height: 250px;
+        @include mq($medium) {
+            max-height: 100%;
+        };
         margin: 0 auto;
     }
 }
