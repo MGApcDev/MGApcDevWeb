@@ -1,9 +1,0 @@
-.post {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    @include mq($large) {
-        margin-bottom: 60px;
-    };
-}

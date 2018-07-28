@@ -18,8 +18,8 @@ main {
         width: 100%;
     };
     .wrapper {
-        margin-right: 25px;
-        margin-left: 25px;
+        @include margin-wrapper('margin-right');
+        @include margin-wrapper('margin-left');
     }
 }
 footer {
