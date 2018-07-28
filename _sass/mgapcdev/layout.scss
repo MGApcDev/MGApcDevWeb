@@ -20,8 +20,6 @@ main {
     .wrapper {
         @include margin-wrapper('margin-right');
         @include margin-wrapper('margin-left');
-        // margin-right: 25px;
-        // margin-left: 25px;
     }
 }
 footer {
