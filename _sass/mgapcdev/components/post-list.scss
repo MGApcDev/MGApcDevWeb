@@ -16,7 +16,7 @@
         grid-column: 2;
     };
 }
-.post--list {
+.post-list {
     width: 100%;
     margin-bottom: 50px;
     @include mq($medium) {
@@ -44,32 +44,36 @@
         }
     }
 }
-.post--date {
-    margin-bottom: 15px;
+.post-list--date {
+    margin-bottom: 5px;
     grid-column: 1;
     @include mq($medium) {
+        margin-bottom: 15px;
         grid-column: 2;
     };
 }
-.post--title {
+.post-list--title {
+    @include font--post-list--title;
     margin-bottom: 5px;
     grid-column: 1;
     @include mq($medium) {
         grid-column: 2;
     };
 }
-.post--desc {
+.post-list--desc {
+    margin-bottom: 0px;
     grid-column: 1;
     @include mq($medium) {
         grid-column: 2;
     };
 }
-.post--thumbnail {
-    @include center;
+.post-list--thumbnail {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
     max-height: 250px;
     grid-column: 1;
     @include mq($medium) {
-        @include aspect-ratio(16, 10);
         grid-row: 1 / span 4;
         max-height: none;
         margin: 0;
@@ -80,5 +84,51 @@
             max-height: 100%;
         };
         margin: 0 auto;
+    }
+}
+
+.thumbnail--blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    max-height: 250px;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    @include mq($medium) {
+        display: none;
+    };
+    img {
+        width: 120%;
+        max-width: none;
+        min-height: 500px;
+        margin-left: -10%;
+        margin-top: -125px;
+        background-color: $white;
+        filter: blur(7px);
+    }
+}
+.thumbnail--main {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    @include mq($medium) {
+        @include aspect-ratio(16, 10);
+        height: 100%;
+    };
+    img {
+        display: block;
+        min-height: 250px;
+        border-left: 1px solid rgba(0, 0, 0, 0.3);
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        background-color: $white;
+        @include mq($medium) {
+            margin: auto;
+            min-height: initial;
+            border: none;
+        };
     }
 }

@@ -212,7 +212,13 @@ h2 {
 h3 {
     @include H3;
 }
-
-p, h2, h3, ol, ul, table, blockquote, .highlight {
+hr {
+    width: 66%;
+    @include center;
+}
+blockquote {
+    padding-left: 15px;
+}
+p, h2, h3, ol, ul, table, blockquote, hr, .highlight {
     @include margin-element('margin-bottom');
 }

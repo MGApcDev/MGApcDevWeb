@@ -1,7 +1,7 @@
 .android-emote {
-  // height: 100%;
   max-height: 400px;
-  margin: 0 auto;
+  margin-bottom: 30px;
+  @include center;
   @include mq($medium) {
       grid-column: 1 / span 2;
   };

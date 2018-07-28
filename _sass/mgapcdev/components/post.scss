@@ -19,7 +19,9 @@
         };
     }
     .post--image {
-        @include margin('margin-bottom', 5px, 10px, '', 20px);
+        &.has-desc {
+            @include margin('margin-bottom', 5px, 10px, '', 20px);
+        }
     }
     .post--image-desc {
         text-align: left;
@@ -61,6 +63,15 @@
                 text-align: right;
             }
         }
+    }
+    iframe {
+        max-height: 400px;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        @include mq($small) {
+            width: 100%;
+            margin-left: 0;
+        };
     }
 }
 .post--header--title {

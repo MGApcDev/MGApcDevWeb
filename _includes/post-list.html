@@ -1,19 +1,26 @@
 {%- if site.posts.size > 0 -%}
-  <ul class="post--list">
+  <ul class="post-list">
     {%- for post in site.posts -%}
     <a href="{{ post.url | relative_url }}">
     <li>
       {%- if post.thumbnail != "" -%}
-          <div class="post--thumbnail">
-              <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
+          <div class="post-list--thumbnail">
+              <div class="thumbnail--blur">
+                  <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
+              </div>
+              <div class="thumbnail--main">
+                  <img class="" src="{{ "/assets/posts/" | append: post.thumbnail | relative_url }}" alt="">
+              </div>
           </div>
       {%- endif -%}
       {%- assign date_format = "%-d %b, %Y" -%}
-      <h3 class="post--title">
+      <h2 class="post-list--title">
           {{ post.title | escape }}
-      </h3>
-      <span class="post--date"><i>{{ post.date | date: date_format }}</i></span>
-      <p class="post--desc">{{ post.desc }}</p>
+      </h2>
+      <span class="post-list--date"><i>{{ post.date | date: date_format }}</i></span>
+      {%- if post.desc and post.desc != '' -%}
+        <p class="post-list--desc">{{ post.desc }}</p>
+      {%- endif -%}
     </li>
     </a>
     <hr>

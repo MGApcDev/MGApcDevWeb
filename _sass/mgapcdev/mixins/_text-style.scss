@@ -61,6 +61,23 @@
 @mixin font--code {
 
 }
+@mixin font--post-list--title {
+    @include base-font;
+    font-family: $font-family--SourceSansPro;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.75;
+    @include mq($small) {
+        font-size: 32px;
+    };
+    @include mq($medium) {
+        font-size: 28px;
+    };
+    @include mq($large) {
+        font-family: $font-family--Cabin;
+        font-size: 32px;
+    };
+}
 @mixin font--post--title {
     @include H1;
 }
@@ -81,7 +98,17 @@
     @include H2;
 }
 @mixin font--nav--text {
-
+    @include base-font;
+    font-family: $font-family--SourceSansPro;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.7;
+    @include mq($small) {
+        font-size: 16px;
+    };
+    @include mq($large) {
+        font-size: 18px;
+    };
 }
 @mixin font--footer--text {
 

@@ -2,6 +2,13 @@
     @include clearfix;
     li {
         display: block;
+        a {
+            @include font--nav--text;
+        }
+    }
+    .hamburger {
+        padding-bottom: 0;
+        padding-top: 13px;
     }
 }
 .navbar--wrapper {
@@ -28,7 +35,6 @@
         i {
             padding-top: 13px;
             padding-bottom: 13px;
-            // padding: 13px 25px;
             @include margin-wrapper('padding-left');
             @include margin-wrapper('padding-right');
         }
@@ -47,10 +53,6 @@
             display: inline-block;
         }
     }
-    // max-height: 120px;
-    &.closed {
-        // max-height: 0;
-    }
 }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);#cssmenu {
@@ -62,7 +64,6 @@
   margin: 0;
   padding: 0;
   line-height: 1;
-  // display: block;
   zoom: 1;
 }
 #cssmenu ul:after {
@@ -72,12 +73,6 @@
   height: 0;
   clear: both;
   visibility: hidden;
-}
-#cssmenu ul li {
-
-  // display: inline-block;
-  // padding: 0;
-  // margin: 0;
 }
 #cssmenu.align-right ul li {
   float: right;
@@ -92,13 +87,7 @@
   padding: 15px 25px;
   @include margin-wrapper('padding-right');
   @include margin-wrapper('padding-left');
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
   text-transform: uppercase;
-  font-size: 20px;
-  @include mq($small) {
-    font-size: 14px;
-  }
   position: relative;
   -webkit-transition: color .25s;
   -moz-transition: color .25s;
@@ -117,11 +106,15 @@
   display: block;
   position: absolute;
   right: -3px;
-  top: 21px;
+  top: 27px;
   height: 2px;
   width: 6px;
   background: #ffffff;
   opacity: .5;
+  @include mq($large) {
+      top: 28px;
+      height: 4px;
+  };
 }
 #cssmenu ul li a:before {
   content: "";
@@ -156,7 +149,6 @@
 @media screen and (max-width: 768px) {
   #cssmenu ul li {
     float: none;
-    // display: block;
   }
   #cssmenu ul li a {
     width: 100%;
@@ -185,7 +177,6 @@
   width: 100% !important;
   transition: top 0.2s ease-in-out;
   top: 0px;
-  height: 44px;
 }
 .navbar-brand {
   background: $highlight-color;

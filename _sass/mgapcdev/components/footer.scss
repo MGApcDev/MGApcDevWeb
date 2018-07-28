@@ -16,35 +16,30 @@ footer {
     }
     .wrapper {
         max-width: $ultrawide;
-        margin: 15px 25px;
-        @include margin-wrapper('margin-right');
-        @include margin-wrapper('margin-left');
         @include clearfix;
+        @include center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        @include margin-wrapper('padding-right');
+        @include margin-wrapper('padding-left');
+        box-sizing: border-box;
         @include mq($small) {
             margin-top: 25px;
-            margin-bottom: calc(25px - 18px);
+            margin-bottom: calc(25px - 8px);
         };
-        @include mq($ultrawide) {
-            margin-left: auto;
-            margin-right: auto;
-        };
-
     }
 }
 .footer--heading {
     position: relative;
     margin: 0;
-    margin-bottom: calc(20px - 18px);
     text-align: center;
     @include mq($small) {
         float: left;
-        // top: 50%;
-        // transform: translateY(-50%);
     };
 
 }
 .footer--heading--logo {
-    margin-bottom: 18px;
+    margin-bottom: 21px;
     margin-right: 10px;
     height: 32px;
 }

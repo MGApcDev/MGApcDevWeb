@@ -1,4 +1,4 @@
-<p class="post--image">
+<p class="post--image {% if include.desc and include.desc != ''  %}has-desc{% endif %}">
 {% if include.url contains '://'  %}
 <img src="{{ include.url }}" alt="">
 {% else %}
