@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: plain
 categories: nav
-title: Projects
-permalink: /projects/
+title: Posts
+permalink: /posts/
 weight: 1
 ---
 

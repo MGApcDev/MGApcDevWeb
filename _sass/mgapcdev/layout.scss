@@ -25,3 +25,8 @@ main {
 footer {
     width: 100%;
 }
+.layout--plain {
+    .post--header--title {
+        @include margin-element('margin-bottom');
+    }
+}
