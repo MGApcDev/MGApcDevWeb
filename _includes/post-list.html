@@ -1,6 +1,14 @@
 {%- if site.posts.size > 0 -%}
   <ul class="post-list">
-    {%- for post in site.posts -%}
+    {% assign n = site.posts.size | minus: 1 %}
+    {% assign see-more = false %}
+    {% if include.range and include.range != "" %}
+      {% assign n = include.range | minus: 1 %}
+      {% assign see-more = true %}
+    {% endif %}
+    {%- for num in (0..n) -%}
+    {%- assign post = site.posts[num] -%}
+
     <a href="{{ post.url | relative_url }}">
     <li>
       {%- if post.thumbnail != "" -%}
@@ -26,4 +34,7 @@
     <hr>
     {%- endfor -%}
   </ul>
+  {% if see-more %}
+  <h3 class="post-list--see-more"><a href="/posts/">See all posts</a></h3>
+  {% endif %}
 {%- endif -%}

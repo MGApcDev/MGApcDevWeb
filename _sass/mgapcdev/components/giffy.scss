@@ -4,6 +4,7 @@
   @include center;
   @include mq($medium) {
       grid-column: 1 / span 2;
+      grid-row: 1;
   };
   .spinner {
     opacity: 1;

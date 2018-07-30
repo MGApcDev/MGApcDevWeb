@@ -14,6 +14,7 @@
     @include mq($medium) {
         display: block;
         grid-column: 2;
+        grid-row: 2 / span 2;
     };
 }
 .post-list {
@@ -21,6 +22,7 @@
     margin-bottom: 50px;
     @include mq($medium) {
         grid-column: 1;
+        grid-row: 2;
     };
     li {
         display: grid;
@@ -131,4 +133,13 @@
             border: none;
         };
     }
+}
+.post-list--see-more {
+    text-align: center;
+    margin-bottom: 50px;
+    @include mq($medium) {
+        text-align: left;
+        grid-column: 1;
+        grid-row: 3;
+    };
 }
