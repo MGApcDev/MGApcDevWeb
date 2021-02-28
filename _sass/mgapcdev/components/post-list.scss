@@ -21,7 +21,7 @@
     width: 100%;
     margin-bottom: 50px;
     @include mq($medium) {
-        grid-column: 1;
+        grid-column: 1 / span 2;
         grid-row: 2;
     };
     li {

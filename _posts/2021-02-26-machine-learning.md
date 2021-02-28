@@ -1,8 +1,8 @@
 ---
-layout: post-classic
+layout: post
 title: "Machine learning on the web, how hard can it be?"
 desc: "Using Machine Learning on webpages in realtime is harder than expected."
-thumbnail: ""
+thumbnail: "4c226c50e69af0f90b3b70d021b91baa.jpeg"
 categories: article
 tags: {}
 ---
